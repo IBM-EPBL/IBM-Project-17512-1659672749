@@ -1,0 +1,9 @@
+1.)Why is python a popular programming language?  
+             Python is beginner friendly due to its syntax, beginners can learn python easily than other programming langauages like c,java etc..  
+     therefore many people recommend beginners to start with pyhon as thier first programming language, that's why python is so popular.  
+   
+ 2.) What are the other frameworks that can be used with python?  
+             some other popular frameworks are Django, Cherrypy, web2py, TurboGears, FastAPI etc..  
+   
+ 3.)what is the fullform of WSGI?  
+         Web server gateway interface.
