@@ -7,7 +7,7 @@
 
 
 ### What are the other frameworks that can be used with python?
--         Django
+-       Django
 - 		Flask
 - 		Tenserflow
 - 		Web2py
