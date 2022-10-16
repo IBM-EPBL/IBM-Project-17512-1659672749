@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: cornflowerblue;
+            font-family: 'poppins';
+            overflow: hidden;
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        input {
+            border: none;
+            padding: 16px;
+            width: 300px;
+            height: 6px;
+            border-radius: 10px;
+            font-family: 'poppins';
+            border: 2px solid #000;
+        }
+
+        input::placeholder {
+            font-family: 'poppins';
+            font-weight: 900;
+            font-size: 16px;
+        }
+
+        .container {
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            border-radius: 10px;
+            flex-direction: column;
+        }
+
+        .int_div {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .btn {
+            width: 100%;
+            background-color: rgb(86, 141, 242);
+            color: #fff;
+            height: 40px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            font-family: 'poppins';
+            cursor: pointer;
+            border: none;
+            margin-top:10px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <h3>User registration Form</h3>
+            <form action="http://127.0.0.1:5000/login" method="POST">
+                <div class=".int_div">
+                    <h3>Name</h3>
+                    <input type="text" name="name" />
+                </div>
+                <div class=".int_div">
+                    <h3>Mobile Number:</h3>
+                    <input type="text" name="mobile" />
+                </div>
+                <div class=".int_div">
+                    <h3>Email:</h3>
+                    <input type="email" name="email" />
+                </div>
+                <button class="btn">Submit</button>
+            </form>
+        </div>
+
+    </div>
+</body>
+
+</html>
