@@ -1,0 +1,21 @@
+.img{
+    width: 150px;
+    height: 150px;
+}
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: cornflowerblue;
+    width: 100vw;
+    height: 100vh;
+}
+.img-container{
+    height: 200px;
+    width: 200px;
+    background-color: azure;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
