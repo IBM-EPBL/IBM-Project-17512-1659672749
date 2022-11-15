@@ -30,7 +30,7 @@ function SkillsStep({ onNext }: IProps) {
               <Inputx
                 placeholder="skill"
                 onChange={(e) => dispatch(setSkillName({ index, data: e.target.value }))}
-                value={skill.skill}
+                value={skill?.skill}
               />
               <Select
                 onChange={(value) => {
@@ -38,13 +38,13 @@ function SkillsStep({ onNext }: IProps) {
                 }}
                 focusBorderColor="#79589f"
                 placeholder="Select Option"
-                value={skill.level}
+                value={skill?.level}
                 sx={{
                   marginRight: '10px',
                 }}
               >
                 <option key={nanoid()} value="Beginner">
-                  beginner
+                  Beginner
                 </option>
                 <option key={nanoid()} value="Intermediate">
                   Intermediate

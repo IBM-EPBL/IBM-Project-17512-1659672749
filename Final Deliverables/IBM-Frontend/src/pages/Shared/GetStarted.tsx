@@ -13,13 +13,8 @@ type Itype = 'student' | 'corporate';
 
 function GetStarted() {
   const navigate = useNavigate();
-  const {
-    type,
-    email,
-    is_steps_completed,
-  }: { type: Itype; email: string; is_steps_completed: boolean } = useSelector(
-    (state: Tstore) => state.users.data,
-  );
+  const { type, is_steps_completed }: { type: Itype; email: string; is_steps_completed: boolean } =
+    useSelector((state: Tstore) => state.users.data);
   const [steps, setSteps] = useState<JSX.Element[]>([<Empty />]);
   const [currentStep, setCurrentStep] = useState<number>(0);
 
@@ -38,7 +33,7 @@ function GetStarted() {
         <SocialSteps key="social" onNext={nextStep} />,
       ]);
     } else if (type === 'corporate') {
-      setSteps([<CorporateStep email={email} />]);
+      setSteps([<CorporateStep />]);
     } else {
       navigate('/login');
     }

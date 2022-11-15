@@ -11,7 +11,7 @@ import ManageJob from './pages/Corporate/ManageJob';
 import Assessment from './pages/Student/Assessment';
 import Test from './pages/Student/Test';
 import JobStats from './pages/Corporate/JobStats';
-import Hackathon from './pages/Student/Hackathon'
+
 function App() {
   return (
     <BrowserRouter>
@@ -27,7 +27,6 @@ function App() {
           <Route path="/job-stats/:id" element={<JobStats />} />
           <Route path="/assessments" element={<Assessment />} />
           <Route path="/assessment/test-board" element={<Test />} />
-          <Route path="/hackathon" element={<Hackathon />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -60,9 +60,11 @@ class Values {
 
 function StudentsForm({ onNext }: IProps) {
   const dispatch = useDispatch();
-  const { email, name, mobile_number, address, stream, year_of_experience } = useSelector(
+  const { name, mobile_number, address, stream, year_of_experience } = useSelector(
     (state: Tstore) => state.studentData,
   );
+
+  const { email } = useSelector((state: Tstore) => state.users.data);
 
   const next = (fn: (index: number) => void) => {
     fn(2);

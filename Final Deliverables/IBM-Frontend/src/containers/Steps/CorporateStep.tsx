@@ -11,7 +11,6 @@ import {
 } from 'class-validator';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
 import Buttonx from '../../components/Buttonx';
 import Inputx from '../../components/Inputx';
 import TextAreax from '../../components/TextAreax';
@@ -54,10 +53,9 @@ class Values {
   maxEmployees!: number | undefined;
 }
 
-function CorporateStep({ email }: { email: string }) {
-  const navigate = useNavigate();
+function CorporateStep() {
   const dispatch = useDispatch();
-  const { company_name } = useSelector((state: Tstore) => state.users.data);
+  const { email, company_name } = useSelector((state: Tstore) => state.users.data);
   const [mobile, setMobile] = useState<string>('');
   const [web, setWeb] = useState<string>('');
   const [logo, setLogo] = useState<string>('');
@@ -108,7 +106,7 @@ function CorporateStep({ email }: { email: string }) {
             message.success('Login Process Successfully Completed');
             setLoading(false);
             dispatch(setUserData({ data: { ...response.data.data, type: 'corporate' } }));
-            navigate('/');
+            window.location.href = '/';
           }
         })
         .catch((error) => {

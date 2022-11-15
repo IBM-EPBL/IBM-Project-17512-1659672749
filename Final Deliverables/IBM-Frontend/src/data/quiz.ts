@@ -18,6 +18,9 @@ import {
   SiRedis,
   SiTypescript,
 } from 'react-icons/si';
+import { FcElectronics } from 'react-icons/fc';
+import { GiSatelliteCommunication } from 'react-icons/gi';
+import { MdQuiz } from 'react-icons/md';
 export const quizzes = [
   {
     label: 'C',
@@ -39,7 +42,7 @@ export const quizzes = [
   },
   {
     label: 'Javascript',
-    key: 'javascript',
+    key: 'js',
     isBeta: false,
     icon: SiJavascript,
   },
@@ -105,7 +108,7 @@ export const quizzes = [
   },
   {
     label: 'Mongo DB',
-    key: 'mongo',
+    key: 'mongodb',
     isBeta: false,
     icon: SiMongodb,
   },
@@ -126,5 +129,59 @@ export const quizzes = [
     key: 'tensorflow',
     isBeta: true,
     icon: SiTensorflow,
+  },
+  {
+    label: 'Analog Communication',
+    key: 'analog',
+    isBeta: false,
+    icon: GiSatelliteCommunication,
+  },
+  {
+    label: 'Digital Electronics',
+    key: 'digital',
+    isBeta: false,
+    icon: FcElectronics,
+  },
+  {
+    label: 'E&I',
+    key: 'E&I',
+    isBeta: false,
+    icon: MdQuiz,
+  },
+  {
+    label: 'Automobile Engineering',
+    key: 'automobile',
+    isBeta: false,
+    icon: MdQuiz,
+  },
+  {
+    label: 'Food Technology',
+    key: 'foodtech',
+    isBeta: false,
+    icon: MdQuiz,
+  },
+  {
+    label: 'Chemical Engineering',
+    key: 'chemical',
+    isBeta: false,
+    icon: MdQuiz,
+  },
+  {
+    label: 'Civil Engineering',
+    key: 'civil',
+    isBeta: false,
+    icon: MdQuiz,
+  },
+  {
+    label: 'Electrical',
+    key: 'eee',
+    isBeta: false,
+    icon: MdQuiz,
+  },
+  {
+    label: 'Mechanical Engineering',
+    key: 'mechanical',
+    isBeta: false,
+    icon: MdQuiz,
   },
 ];

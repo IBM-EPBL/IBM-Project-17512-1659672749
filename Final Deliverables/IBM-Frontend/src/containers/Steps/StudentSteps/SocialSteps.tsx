@@ -47,9 +47,10 @@ function SocialSteps({ onNext }: IProps) {
   const [portfolio, setPortfolio] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
 
-  const { email, address, mobile_number, name, skills, stream, year_of_experience } = useSelector(
+  const { address, mobile_number, name, skills, stream, year_of_experience } = useSelector(
     (state: Tstore) => state.studentData,
   );
+  const { email } = useSelector((state: Tstore) => state.users.data);
 
   const submitHandller = async () => {
     const obj = new Links();

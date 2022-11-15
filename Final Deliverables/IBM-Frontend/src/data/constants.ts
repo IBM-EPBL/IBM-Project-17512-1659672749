@@ -1,4 +1,4 @@
-export const SERVER_URL = 'http://localhost:8000';
+export const SERVER_URL = 'https://api-figo-portal.herokuapp.com';
 
 export const ISLOGGEDIN = '/is-logged';
 

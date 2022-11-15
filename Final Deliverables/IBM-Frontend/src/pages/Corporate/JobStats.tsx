@@ -145,15 +145,15 @@ function JobStats() {
                   <ModalOverlay />
                   <ModalContent>
                     <ModalHeader>{`${
-                      modelData.isOpen && data.applied_candidates[modelData.data].name
+                      modelData.isOpen && leaderBoard[modelData.data].name
                     } Details`}</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>
                       <Typox content="h4">{'Hackerrank Verified Skills (Certificates)'}</Typox>
                       <List spacing={3}>
                         {modelData.isOpen &&
-                          data.applied_candidates[modelData.data].hackerrank_data.certificates &&
-                          data.applied_candidates[modelData.data].hackerrank_data.certificates.map(
+                          leaderBoard[modelData.data].hackerrank_data.certificates &&
+                          leaderBoard[modelData.data].hackerrank_data.certificates.map(
                             (certificate: any) => {
                               return (
                                 <ListItem key={nanoid()}>
@@ -174,21 +174,19 @@ function JobStats() {
                           )}
                       </List>
                       {modelData.isOpen &&
-                        data.applied_candidates[modelData.data].leetcode_data
-                          .total_problems_solved && (
+                        leaderBoard[modelData.data].leetcode_data.total_problems_solved && (
                           <>
                             <Divider />
                             <br />
                             <Typox content="h4">{'Leetcode Stats'}</Typox>
                             {
                               <Typox color="#808080" content="h4">{`Total Problems Solved : ${
-                                data.applied_candidates[modelData.data].leetcode_data
-                                  .total_problems_solved
+                                leaderBoard[modelData.data].leetcode_data.total_problems_solved
                               }`}</Typox>
                             }
-                            {data.applied_candidates[modelData.data].leetcode_data.total_badges && (
+                            {leaderBoard[modelData.data].leetcode_data.total_badges && (
                               <Typox color="#808080" content="h4">{`No. Of Badges: ${
-                                data.applied_candidates[modelData.data].leetcode_data.total_badges
+                                leaderBoard[modelData.data].leetcode_data.total_badges
                               }  badges`}</Typox>
                             )}
                           </>
@@ -198,24 +196,22 @@ function JobStats() {
                       <Typox content="h4">{'Verified Skills (Assessments)'}</Typox>
                       <List spacing={3}>
                         {modelData.isOpen &&
-                          data.applied_candidates[modelData.data].completed_quizzes &&
-                          data.applied_candidates[modelData.data].completed_quizzes.map(
-                            (quiz: any) => {
-                              if (quiz.score >= 7) {
-                                return (
-                                  <ListItem key={nanoid()}>
-                                    <Flex alignItems={'center'}>
-                                      <BiCheckboxChecked color="green" size="24px" />
-                                      <br />
-                                      <p>{quiz.topic}</p>
-                                    </Flex>
-                                  </ListItem>
-                                );
-                              } else {
-                                return <React.Fragment key={nanoid()}></React.Fragment>;
-                              }
-                            },
-                          )}
+                          leaderBoard[modelData.data].completed_quizzes &&
+                          leaderBoard[modelData.data].completed_quizzes.map((quiz: any) => {
+                            if (quiz.score >= 7) {
+                              return (
+                                <ListItem key={nanoid()}>
+                                  <Flex alignItems={'center'}>
+                                    <BiCheckboxChecked color="green" size="24px" />
+                                    <br />
+                                    <p>{quiz.topic}</p>
+                                  </Flex>
+                                </ListItem>
+                              );
+                            } else {
+                              return <React.Fragment key={nanoid()}></React.Fragment>;
+                            }
+                          })}
                       </List>
                     </ModalBody>
                   </ModalContent>

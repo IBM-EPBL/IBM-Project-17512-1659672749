@@ -138,6 +138,7 @@ function AuthForm({ type, user }: IProps) {
         .get(
           `${SERVER_URL}/${user}${SIGNIN}?email=${value.email}&password=${encoding(
             value.password,
+          )}&device_id=${await getFBToken()},
           )}`,
         )
         .catch((error) => {
@@ -187,7 +188,7 @@ function AuthForm({ type, user }: IProps) {
             <Inputx
               width={'60%'}
               id="signup-student-email"
-              placeholder="expample@institution.edu"
+              placeholder="example@institution.edu"
               type={'email'}
             />
             <Inputx

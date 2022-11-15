@@ -1,7 +1,6 @@
 import React from 'react';
-import { Box, Center, Tag,Flex} from '@chakra-ui/react';
+import { Box, Center, Tag, Flex } from '@chakra-ui/react';
 import Typox from './Typox';
-import { Link } from 'react-router-dom';
 import Buttonx from './Buttonx';
 export default function HackathonCard({ data }: any) {
   return (
@@ -33,8 +32,11 @@ export default function HackathonCard({ data }: any) {
           </h2>
           <Flex wrap={'wrap'} justifyContent="center">
             {data &&
-              data.tags.map((item: any,index: number) => (
-                <Tag key={index} style={{ margin: '5px', backgroundColor: '#ebebeb', padding: '5px' }}>
+              data.tags.map((item: any, index: number) => (
+                <Tag
+                  key={index}
+                  style={{ margin: '5px', backgroundColor: '#ebebeb', padding: '5px' }}
+                >
                   <h2
                     style={{ fontSize: '15px', color: '#4d4c4c', fontFamily: 'ProductSansMedium' }}
                   >
@@ -46,11 +48,11 @@ export default function HackathonCard({ data }: any) {
         </Flex>
       </Flex>
       <Center style={{ position: 'absolute', bottom: '20px', left: '25%' }}>
-        <Link to={data.link}>
+        <a href={data.link} target="_blank" rel="noreferrer">
           <Buttonx height="40px" width="150px" style={{ borderRadius: '10px' }}>
             <h2 style={{ color: 'white' }}>Apply</h2>
           </Buttonx>
-        </Link>
+        </a>
       </Center>
     </Box>
   );

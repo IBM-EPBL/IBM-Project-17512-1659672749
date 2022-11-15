@@ -48,7 +48,6 @@ export const StudentDataSlice = createSlice({
       state.email = payload.data.email;
       state.mobile_number = payload.data.phone.replace(/\s/g, '');
       state.address = '';
-      state.stream = [];
       state.skills = [];
       payload.data.degree.forEach((stream: string, index: number) => {
         state.stream[index] = {
@@ -58,10 +57,12 @@ export const StudentDataSlice = createSlice({
         };
       });
       payload.data.skills.forEach((skill: string, index: number) => {
-        state.skills[index] = {
-          skill: skill,
-          level: 'Beginner',
-        };
+        if (skill.length > 0) {
+          state.skills[index] = {
+            skill: skill.trim(),
+            level: 'Beginner',
+          };
+        }
       });
       state.year_of_experience = payload.data.total_exp;
     },
@@ -109,7 +110,7 @@ export const StudentDataSlice = createSlice({
       state.stream.splice(payload, 1);
     },
     addSkill: (state: iInitialState, { payload }: PayloadAction<any>) => {
-      state.skills = [...state.skills, { skill: '', level: '' }];
+      state.skills = [...state.skills, { skill: '', level: 'Beginner' }];
     },
     deleteSkill: (state: iInitialState, { payload }: PayloadAction<number>) => {
       state.skills.splice(payload, 1);

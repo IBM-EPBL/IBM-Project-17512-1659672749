@@ -33,7 +33,7 @@ function Assessment() {
           <Typox content="h2">Assessments Library</Typox>
           <br />
           <Flex wrap={'wrap'} justifyContent="center">
-            {data ? (
+            {data && data.completed_quizzes ? (
               quizzes.map((quiz) => {
                 const result = data.completed_quizzes.filter(
                   (_quiz: any) => _quiz.topic === quiz.key,
