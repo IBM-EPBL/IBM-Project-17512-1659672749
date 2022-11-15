@@ -26,12 +26,16 @@ To develop an end-to-end web application capable of displaying the current job o
   - [Nirmalraj](Assignment/Nirmalraj/)
 - **Project Design & Planning**
   - [Ideation Phase](<Project%20Design%20and%20planning/Ideation%20phase/>)
-  - [Project Design Phase 1](Project%20Design%20and%20planning/Project%20Design%20Phase%20I)
-  - [Project Design Phase 2](Project%20Design%20and%20planning/Project%20Design%20Phase%20II)
-  - [Project Planning](Project%20Design%20and%20planning)
+  - [Project Design Phase 1](Project%20Design%20and%20planning/Project%20Design%20Phase%20I/)
+  - [Project Design Phase 2](Project%20Design%20and%20planning/Project%20Design%20Phase%20II/)
+  - [Project Planning](Project%20Design%20and%20planning/Project%20Planning/)
 
+- **Project Development Phase**
 
-
+  - [Sprint 1](<Project%20Development%20Phase/Sprint1/>)
+  - [Sprint 2](Project%20Development%20Phase/Sprint2/)
+  - [Sprint 3](Project%20Development%20Phase/Sprint3/)
+  - [Sprint 4](Project%20Development%20Phase/Sprint4/)
 ## Technical Architecture
 
 ![Alt text](https://lh3.googleusercontent.com/1OWTBsvpOXh0YVOalvRAGG8uDOBJea7NpyXg5hSSHb61IRRFHTY8txceIQfcIsc9b9coajOEraPoPIAVr5SOr0WFF0iQKVHnHOXk-wAn6XwNjuZFSsdGwreGV7Y10Q)
