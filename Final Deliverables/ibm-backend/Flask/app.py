@@ -1,9 +1,7 @@
 import json
 import os
 import re
-
 import ibm_db
-import requests
 from flask import Flask, redirect, render_template, request, session, url_for
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
