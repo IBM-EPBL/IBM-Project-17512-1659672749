@@ -25,7 +25,7 @@ To develop an end-to-end web application capable of displaying the current job o
   - [Rahul Tamil Selvan BA](Assignment/Rahul%20Tamil%20Selvan/)
   - [Nirmalraj](Assignment/Nirmalraj/)
 - **Project Design & Planning**
-  - [Ideation Phase](Project%20Design%20and%20Planning/Ideation%20phase/)
+  - [Ideation Phase](<Project%20Design%20and%20Planning/Ideation%20phase/>)
   - [Project Design Phase 1](Project%20Design%20and%20Planning/Project%20Design%20Phase%20I/)
   - [Project Design Phase 2](Project%20Design%20and%20Planning/Project%20Design%20Phase%20II/)
   - [Project Planning](Project%20Design%20and%20Planning/Project%20Planning/)
