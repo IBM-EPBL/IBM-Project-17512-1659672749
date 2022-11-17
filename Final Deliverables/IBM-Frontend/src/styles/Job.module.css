@@ -1,0 +1,59 @@
+.card {
+  border-radius: 5px;
+  margin: 10px;
+  width: 60%;
+}
+/* Single Job */
+.sJob_main {
+  margin: 50px;
+  width: 80%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 1px 4px;
+  padding: 20px;
+}
+.sJob_font {
+  font-size: 24px;
+}
+.sJob_container {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+/* StudentJobs */
+.stJobMain {
+  display: flex;
+}
+.xsFilter {
+  display: none;
+}
+.xlFilter {
+  margin-top: 60px;
+}
+@media screen and (max-width: 468px) {
+  .card {
+    width: 70%;
+    margin: 10px;
+    /* overflow: hidden; */
+  }
+  /* Single Job */
+  .sJob_container {
+    flex-direction: column;
+  }
+  .sJob_font {
+    font-size: 52px;
+  }
+  .sJob_main {
+    margin: 20px;
+    width: 90%;
+  }
+
+  /* StudentJobs */
+  .xlFilter {
+    display: none;
+  }
+  .xsFilter {
+    display: block;
+  }
+  .stJobMain {
+    display: block;
+  }
+}
