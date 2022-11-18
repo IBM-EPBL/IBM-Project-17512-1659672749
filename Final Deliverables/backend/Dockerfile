@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN pip install flask setuptools ibm_db bcrypt requests sendgrid Werkzeug python-dotenv
+RUN pip install flask setuptools ibm_db bcrypt requests sendgrid Werkzeug python-dotenv flask_cors
 
 EXPOSE 5000
 
