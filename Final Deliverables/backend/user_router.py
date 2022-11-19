@@ -9,7 +9,7 @@ user = Blueprint("user", __name__)
 @user.route("/skills", methods=["GET", "POST", "DELETE"])
 @token_required
 def manage_skills(current_user):
-    # Get user_id of current user
+    
     user_id = current_user['USER_ID']
 
     # Handle GET request
