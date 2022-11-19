@@ -28,7 +28,7 @@ def manage_skills(current_user):
 
         return jsonify({"skills": skills}), 200
 
-    # Get the skills from the request
+    
     if not ('skills' in request.json):
         return jsonify({"error": f"All feilds are required!"}), 409
 
