@@ -18,7 +18,7 @@ def token_required(f):
                 "error": "Unauthorized"
             }, 401
         try:
-            # Get the user's email from the decoded token
+
             data = jwt.decode(
                 token, config["APP_SECRET"], algorithms=["HS256"])
 
