@@ -34,7 +34,7 @@ def manage_skills(current_user):
 
     skills = request.json['skills']
 
-    # If no skills are provided then return empty array
+    
     if skills == []:
         return jsonify({"skills": []}), 200
 
