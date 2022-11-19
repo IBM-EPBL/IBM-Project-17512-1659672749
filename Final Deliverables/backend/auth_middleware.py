@@ -38,7 +38,7 @@ def token_required(f):
                 "error": str(e)
             }, 500
 
-        # Pass the authorized user in function args.
+       
         return f(current_user, *args, **kwargs)
 
     return decorated
