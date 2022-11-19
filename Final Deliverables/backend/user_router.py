@@ -40,7 +40,7 @@ def manage_skills(current_user):
 
     # Handle POST request
     if request.method == "POST":
-        # Prepare the SQL statement to insert multiple rows
+       
         values = ''
         for i in range(len(skills)):
             if i == 0:
