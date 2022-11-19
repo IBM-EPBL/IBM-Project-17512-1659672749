@@ -27,7 +27,7 @@ def create_app():
     from .user_router import user
     app.register_blueprint(user, url_prefix='/api/user')
 
-    # In production serve the index.html page at root
+    
 
     @app.route("/")
     def home():
