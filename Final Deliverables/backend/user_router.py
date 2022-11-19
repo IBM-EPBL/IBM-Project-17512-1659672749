@@ -21,7 +21,7 @@ def manage_skills(current_user):
         ibm_db.execute(stmt)
         dict = ibm_db.fetch_assoc(stmt)
 
-        # Iterate over all the results and append skills to the array
+        
         while dict != False:
             skills.append(dict['NAME'])
             dict = ibm_db.fetch_assoc(stmt)
