@@ -57,7 +57,7 @@ def register_user():
     if user:
         return jsonify({"error": f"Email/Phone number is alread in use!"}), 409
 
-    # If user does not exist, then create account
+    
     hashed_password = bcrypt.hashpw(
         password.encode('utf-8'), bcrypt.gensalt())
     sql = f"insert into users(name,email,phone_number,password) values('{name}','{email}','{phone_number}',?)"
