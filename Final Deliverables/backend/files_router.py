@@ -21,7 +21,7 @@ def multi_part_upload(bucket_name, item_name, file_path):
         # set 5 MB chunks
         part_size = 1024 * 1024 * 5
 
-        # set threadhold to 15 MB
+       
         file_threshold = 1024 * 1024 * 15
 
         # set the transfer threshold and chunk size
