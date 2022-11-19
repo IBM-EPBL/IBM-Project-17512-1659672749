@@ -12,7 +12,7 @@ def manage_skills(current_user):
     
     user_id = current_user['USER_ID']
 
-    # Handle GET request
+    
     if request.method == 'GET':
         skills = []
 
