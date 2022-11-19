@@ -4,8 +4,7 @@ from flask import request
 from backend import conn, config
 import ibm_db
 
-# Middleware function that checks for JWT token in header
-# All routes that have the @token_required decorator will be protected
+
 
 
 def token_required(f):
