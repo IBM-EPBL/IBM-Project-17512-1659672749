@@ -28,6 +28,7 @@ def login_user():
                       user["PASSWORD"].encode('utf-8')):
         token = jwt.encode(
             {"email": email},
+
             config["APP_SECRET"],
             algorithm="HS256"
         )
@@ -38,7 +39,7 @@ def login_user():
 
 @auth.route("/signup", methods=['POST'])
 def register_user():
-    # Check if all the required feild are present
+    
     for feild in SIGNUP_FEILDS:
         if not (feild in request.json):
             return jsonify({"error": f"All feilds are required!"}), 409
