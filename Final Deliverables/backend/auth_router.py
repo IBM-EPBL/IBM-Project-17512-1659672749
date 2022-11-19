@@ -28,6 +28,7 @@ def login_user():
                       user["PASSWORD"].encode('utf-8')):
         token = jwt.encode(
             {"email": email},
+
             config["APP_SECRET"],
             algorithm="HS256"
         )
@@ -38,7 +39,7 @@ def login_user():
 
 @auth.route("/signup", methods=['POST'])
 def register_user():
-    # Check if all the required feild are present
+    
     for feild in SIGNUP_FEILDS:
         if not (feild in request.json):
             return jsonify({"error": f"All feilds are required!"}), 409
@@ -48,7 +49,7 @@ def register_user():
     name = request.json['name']
     password = request.json['password']
 
-    # Sql stmt to check if email/number is already in use
+    
     sql = f"select * from users where email='{email}' or phone_number='{phone_number}'"
     stmt = ibm_db.prepare(conn, sql)
     ibm_db.execute(stmt)
@@ -56,7 +57,7 @@ def register_user():
     if user:
         return jsonify({"error": f"Email/Phone number is alread in use!"}), 409
 
-    # If user does not exist, then create account
+    
     hashed_password = bcrypt.hashpw(
         password.encode('utf-8'), bcrypt.gensalt())
     sql = f"insert into users(name,email,phone_number,password) values('{name}','{email}','{phone_number}',?)"

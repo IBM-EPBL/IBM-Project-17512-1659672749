@@ -4,8 +4,7 @@ from flask import request
 from backend import conn, config
 import ibm_db
 
-# Middleware function that checks for JWT token in header
-# All routes that have the @token_required decorator will be protected
+
 
 
 def token_required(f):
@@ -19,7 +18,7 @@ def token_required(f):
                 "error": "Unauthorized"
             }, 401
         try:
-            # Get the user's email from the decoded token
+
             data = jwt.decode(
                 token, config["APP_SECRET"], algorithms=["HS256"])
 
@@ -39,7 +38,7 @@ def token_required(f):
                 "error": str(e)
             }, 500
 
-        # Pass the authorized user in function args.
+       
         return f(current_user, *args, **kwargs)
 
     return decorated

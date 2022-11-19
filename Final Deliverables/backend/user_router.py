@@ -9,10 +9,10 @@ user = Blueprint("user", __name__)
 @user.route("/skills", methods=["GET", "POST", "DELETE"])
 @token_required
 def manage_skills(current_user):
-    # Get user_id of current user
+    
     user_id = current_user['USER_ID']
 
-    # Handle GET request
+    
     if request.method == 'GET':
         skills = []
 
@@ -21,26 +21,26 @@ def manage_skills(current_user):
         ibm_db.execute(stmt)
         dict = ibm_db.fetch_assoc(stmt)
 
-        # Iterate over all the results and append skills to the array
+        
         while dict != False:
             skills.append(dict['NAME'])
             dict = ibm_db.fetch_assoc(stmt)
 
         return jsonify({"skills": skills}), 200
 
-    # Get the skills from the request
+    
     if not ('skills' in request.json):
         return jsonify({"error": f"All feilds are required!"}), 409
 
     skills = request.json['skills']
 
-    # If no skills are provided then return empty array
+    
     if skills == []:
         return jsonify({"skills": []}), 200
 
     # Handle POST request
     if request.method == "POST":
-        # Prepare the SQL statement to insert multiple rows
+       
         values = ''
         for i in range(len(skills)):
             if i == 0:
