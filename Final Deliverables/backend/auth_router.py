@@ -49,7 +49,7 @@ def register_user():
     name = request.json['name']
     password = request.json['password']
 
-    # Sql stmt to check if email/number is already in use
+    
     sql = f"select * from users where email='{email}' or phone_number='{phone_number}'"
     stmt = ibm_db.prepare(conn, sql)
     ibm_db.execute(stmt)
