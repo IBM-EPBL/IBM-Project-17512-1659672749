@@ -18,13 +18,11 @@ def multi_part_upload(bucket_name, item_name, file_path):
     try:
         print("Starting file transfer for {0} to bucket: {1}\n".format(
             item_name, bucket_name))
-        # set 5 MB chunks
         part_size = 1024 * 1024 * 5
 
        
         file_threshold = 1024 * 1024 * 15
 
-        # set the transfer threshold and chunk size
         transfer_config = ibm_boto3.s3.transfer.TransferConfig(
             multipart_threshold=file_threshold,
             multipart_chunksize=part_size
